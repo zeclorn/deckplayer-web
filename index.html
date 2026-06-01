@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DeckPlayer — a controller-friendly local video player built for Steam Deck Game Mode and KDE desktop." />
+  <title>DeckPlayer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <span class="logo">DeckPlayer</span>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#controls">Controls</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="https://github.com/zeclorn/deckplayer" class="btn-nav" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="version-badge">v1.2.0 — Latest Release</div>
+      <h1>Your videos.<br>On your Deck.</h1>
+      <p class="tagline">DeckPlayer is a controller-friendly local video browser and player built for Steam Deck Game Mode and KDE desktop. Launch from Steam, browse your library, and play — no mouse required.</p>
+      <div class="hero-ctas">
+        <a href="https://github.com/zeclorn/deckplayer/releases" class="btn-primary" target="_blank" rel="noopener">Download Flatpak</a>
+        <a href="https://github.com/zeclorn/deckplayer" class="btn-secondary" target="_blank" rel="noopener">View Source</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="deck-mockup">
+        <div class="deck-screen">
+          <div class="browser-ui">
+            <div class="browser-header">
+              <span class="browser-path">~/Videos</span>
+            </div>
+            <div class="browser-list">
+              <div class="browser-item folder">
+                <span class="item-icon">&#128193;</span>
+                <span>Movies</span>
+              </div>
+              <div class="browser-item folder">
+                <span class="item-icon">&#128193;</span>
+                <span>TV Shows</span>
+              </div>
+              <div class="browser-item selected">
+                <span class="item-icon">&#127916;</span>
+                <span>episode-01.mkv</span>
+                <span class="resume-tag">Resume</span>
+              </div>
+              <div class="browser-item">
+                <span class="item-icon">&#127916;</span>
+                <span>episode-02.mkv</span>
+              </div>
+              <div class="browser-item">
+                <span class="item-icon">&#127916;</span>
+                <span>short-film.mp4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="deck-controls">
+          <div class="deck-btn btn-a">A</div>
+          <div class="deck-btn btn-b">B</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Built for the couch</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#127918;</div>
+        <h3>Controller First</h3>
+        <p>Every action is reachable with a gamepad. Native SDL input means Steam Deck controls work out of the box — no fiddling with Steam Input required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127916;</div>
+        <h3>Powered by libmpv</h3>
+        <p>Built on the same engine as mpv — plays MKV, MP4, and virtually any format you throw at it, with subtitle and audio track cycling built in.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128204;</div>
+        <h3>Resume Where You Left Off</h3>
+        <p>DeckPlayer saves your position for every file. Pick up exactly where you stopped, across sessions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128193;</div>
+        <h3>Folder-First Browser</h3>
+        <p>Starts in <code>~/Videos</code>, shows folders before files, hides dotfiles by default. Exactly how a local library should work.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128268;</div>
+        <h3>SD Card Ready</h3>
+        <p>Browse files stored on the Steam Deck's SD card or any mounted path. Works wherever your videos live.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128230;</div>
+        <h3>Flatpak Packaged</h3>
+        <p>Distributed as a Flatpak built on the KDE runtime — clean install, no host library conflicts, easy to add as a non-Steam game.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="controls-section" id="controls">
+    <div class="controls-inner">
+      <h2>Controls at a glance</h2>
+      <div class="controls-grid">
+        <div class="controls-col">
+          <h3>Browser</h3>
+          <ul class="controls-list">
+            <li><span class="key">D-pad / Stick</span> Navigate</li>
+            <li><span class="key">A</span> Open folder or file</li>
+            <li><span class="key">B</span> Go back</li>
+            <li><span class="key">LB / RB</span> Jump through long lists</li>
+          </ul>
+        </div>
+        <div class="controls-col">
+          <h3>Player</h3>
+          <ul class="controls-list">
+            <li><span class="key">A / Start</span> Pause / Play</li>
+            <li><span class="key">LB / ←</span> Seek backward</li>
+            <li><span class="key">RB / →</span> Seek forward</li>
+            <li><span class="key">X</span> Cycle subtitles</li>
+            <li><span class="key">Y</span> Cycle audio tracks</li>
+            <li><span class="key">B (hold)</span> Exit playback</li>
+          </ul>
+        </div>
+        <div class="controls-col">
+          <h3>Window</h3>
+          <ul class="controls-list">
+            <li><span class="key">Select</span> Exit app</li>
+            <li><span class="key">F / F11</span> Toggle fullscreen</li>
+          </ul>
+        </div>
+      </div>
+      <p class="controls-note">All controls map cleanly to Steam Input. See the <a href="https://github.com/zeclorn/deckplayer#recommended-steam-input-mapping" target="_blank" rel="noopener">recommended mapping</a> in the README.</p>
+    </div>
+  </section>
+
+  <section class="install-section" id="install">
+    <div class="install-inner">
+      <h2>Get DeckPlayer</h2>
+      <p>Install the Flatpak bundle and add it as a non-Steam game to launch from Game Mode.</p>
+      <div class="install-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <strong>Download the Flatpak</strong>
+            <p>Grab <code>io.github.zeclorn.DeckPlayer.flatpak</code> from the latest release.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <strong>Install it</strong>
+            <pre><code>flatpak install --user io.github.zeclorn.DeckPlayer.flatpak</code></pre>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <strong>Add to Steam</strong>
+            <p>Add as a non-Steam game using <code>flatpak run io.github.zeclorn.DeckPlayer</code> as the launch command.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/zeclorn/deckplayer/releases" class="btn-primary" target="_blank" rel="noopener">Download Latest Release</a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="logo">DeckPlayer</span>
+    <p class="footer-copy">Open source &mdash; <a href="https://github.com/zeclorn/deckplayer" target="_blank" rel="noopener">github.com/zeclorn/deckplayer</a></p>
+  </footer>
+
+</body>
+</html>
